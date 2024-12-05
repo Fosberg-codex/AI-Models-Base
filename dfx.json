@@ -1,8 +1,18 @@
 {
   "canisters": {
-    "modelsbase_backend": {
-      "main": "src/modelsbase_backend/main.mo",
+    "modelsbases_backend": {
+      "main": "src/modelsbases_backend/main.mo",
       "type": "motoko"
+    },
+    "modelsbases_frontend": {
+      "dependencies": [
+        "modelsbases_backend"
+      ],
+      "source": [
+        "src/modelsbases_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "modelsbases_frontend"
     }
   },
   "defaults": {
